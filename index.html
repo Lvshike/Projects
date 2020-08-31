@@ -31,20 +31,6 @@
 </head>
 <body style="background: url('./images/bg.jpg')">
     <div class="demo"></div>
-    <div class="box">
-        <h1>
-            <canvas id="myCanvas"></canvas>
-        </h1>
-        <ul class="pro">
-            <li>
-                <h3>
-                    <a target='_blank' href="https://lvshike.github.io/dangdang">
-                        当当图书网（JQuery项目）
-                    </a>
-                </h3>
-            </li>
-        </ul>
-    </div>
 
     <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="js/jquery.fireworks.js"></script>
@@ -55,29 +41,6 @@
         width: '100%', 
         height: '100%' 
         });
-    </script>
-    <script>
-        var arr = [
-            {id:'myCanvas', title:'个人项目展示'},
-            // {id:'dangdang', title:'当当图书网'}
-        ]
-        arr.forEach(item=>{
-            var c=document.getElementById(item.id);
-            var ctx=c.getContext("2d");
-            ctx.font="20px Georgia";
-            ctx.font="30px Verdana";
-
-            //创建渐变
-            var gradient=ctx.createLinearGradient(0,0,c.width,0);
-                gradient.addColorStop("0","magenta");
-                gradient.addColorStop("0.5","blue");
-                gradient.addColorStop("1","red");
-
-                //把他赋值给fillStyle
-                ctx.fillStyle=gradient;
-                ctx.fillText(item.title,0,50);
-        })
-        
     </script>
 </body>
 </html>
